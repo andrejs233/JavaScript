@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        background-color: rgb(30, 30, 126);
+        color: yellowgreen;
+        font: normal 15pt arial;
+        }
+        h1{
+        color: rgb(219, 126, 3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]//Com esse comando euposso ter acesso a qualquer tag do HTML apenas digitando o numero.
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'estou agardando...'//Aqui eu selecionei por ID o paragrafo criando uma variavel para ele e alterando a escrita e a cor com comandos
+    </script>
+</body>
+</html>

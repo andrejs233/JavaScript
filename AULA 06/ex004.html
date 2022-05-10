@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br/>`)//Aqui é o comando para contar os caracteres.
+        document.write(`Seu nome em maiúsculo é <strong>${nome.toUpperCase()}</strong>.<br/>`)//O "strong" é o negrito, O "<br/>" é quebra de linha.
+        document.write(`Seu nome em minusculo é <strong>${nome.toLowerCase()}</strong>`)
+        //Abaixo é uma formatação de numero
+        var n1 = 1545.5
+        n1.toFixed(2)//Aqui ele vai aparecer "1545.50" colocanndo 2 casas decimais 
+        n1.toFixed(2).replace('.', ',')// Aqui ele está colocando 2 casas decimais e trocando uma coisa por outra no caso "." por ","
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})//Aqui ele pega a localidade digitada e pega e coloca na frente do numero 'BRL = R$', 'US = US$' ou 'EUR = €' etc..
+    </script>
+</body>
+</html>

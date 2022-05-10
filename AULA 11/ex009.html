@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <style>
+        body{
+            background-color: rgb(131, 241, 6);
+            color: rgb(0, 89, 255);
+            font: normal 15pt cooper;
+
+        }
+        h1{
+            color: rgb(197, 72, 13);
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual país?</h1>
+    Nascionalidade: <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var pais = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML += `<p>Você é está no pais: <strong>${pais.value}</strong></p> `
+            if (pais.value == 'brasil', 'Brasil', 'br') {
+                res.innerHTML += 'Você é Brasileiro!'
+            }
+            else{
+                res.innerHTML += 'você é Estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>
